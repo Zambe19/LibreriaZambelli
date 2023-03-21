@@ -1,0 +1,36 @@
+Name: Items
+Type: FolderType
+Children:
+- Name: ImportExportAllAlarms
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"Optix 1.0.3.360\n\nSono partito dallo script di Tommaso e ho modificato l'importazione e l'esportazione della Severity, in quanto il cliente aveva la Severity come link dinamico e non come valore\n"}
+  Children:
+  - Name: ImportExportAllAlarms
+    Id: g=a6c27544509f954a50323d224fcb8d01
+    Supertype: NetLogic
+    ReferenceType: HasComponent
+    Children:
+    - Name: BehaviourStartPriority
+      Type: BehaviourStartPriorityVariableType
+      DataType: Byte
+      Value: 180
+    - Name: CSVPath
+      Type: BaseDataVariableType
+      DataType: AbsoluteResourceUri
+      Value: "file:///C:/temp/"
+    - Name: CharacterSeparator
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ";"
+    - Name: WrapFields
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: MessageAsTranslationKey
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+    - Class: Method
+      Name: ExportAlarms
+    - Class: Method
+      Name: ImportAlarms
